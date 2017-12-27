@@ -28,8 +28,8 @@ class Storage():
       user   = os.getenv('MYSQL_USERNAME'),
       passwd = os.getenv('MYSQL_PASSWORD'),
       db     = os.getenv('MYSQL_INSTANCE_NAME'),
-      host   = os.getenv('MYSQL_PORT_3306_TCP_ADDR'),
-      port   = int(os.getenv('MYSQL_PORT_3306_TCP_PORT'))
+      host   = os.getenv('MYSQL_SERVICE_HOST'),
+      port   = int(os.getenv('MYSQL_SERVICE_PORT'))
     )
 
     cur = self.db.cursor()
