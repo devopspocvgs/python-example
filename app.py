@@ -1,12 +1,13 @@
 import os
 import flask
+from flask import jsonify
 
 application = flask.Flask(__name__)
 application.debug = True
 
 @application.route('/sample-request')
 def sample_request():
-  return {"message":"Hello Devops this is production version"}
+  return jsonify({"message":"Hello Devops this is production version"})
 
 @application.route('/liveness')
 def liveness():
