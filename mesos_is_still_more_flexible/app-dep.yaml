@@ -12,18 +12,7 @@ spec:
     spec:
       containers:
       - name: python-example
-        image: vngrs/python-example:0.1
+        image: ykbacr.azurecr.io/ext/ykbpoc:${GIT_COMMIT}
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
-        env:
-        - name: MYSQL_USERNAME
-          value: "root"
-        - name: MYSQL_PASSWORD
-          value: "osman"
-        - name: MYSQL_INSTANCE_NAME
-          value: "osmandb"
-        - name: MYSQL_SERVICE_HOST
-          value: "?????"
-        - name: MYSQL_SERVICE_PORT
-          value: "27017"
