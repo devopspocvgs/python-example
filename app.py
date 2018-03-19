@@ -10,16 +10,16 @@ def populate():
   storage = Storage()
   storage.populate()
   score = storage.score()
-  return "Hello Devops 123, %d!" % score
+  return "Hello Devops this is production version, %d!" % score
 
 @application.route('/liveness')
 def liveness():
   storage = Storage()
-  return "Container is Alive"
+  return "Container is Alive this is production version"
 
 @application.route('/health')
 def health():
-  return "Healthy"
+  return "Healthy this is production version"
 
 
 class Storage():
