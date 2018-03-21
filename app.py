@@ -7,7 +7,7 @@ application.debug = True
 
 @application.route('/sample-request')
 def sample_request():
-  return jsonify({"message":"Hello Devops this is staging version"})
+  return jsonify({"message":"Hello Devops this is staging-2 version"})
 
 @application.route('/liveness')
 def liveness():
